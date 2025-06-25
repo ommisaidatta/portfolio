@@ -35,7 +35,7 @@ a {
   padding: 20px 10px;
   border-radius: 20px;
   border-bottom: 1px solid #0ef;
-  box-shadow: 0 3px 8px rgba(0, 238, 255, 0.5);
+  box-shadow: 0 3px 10px  rgba(0, 238, 255, 0.5);
 }
 
 
@@ -499,7 +499,7 @@ i {
   .nav-links {
     flex-direction: row;
     align-items: center;
-    background: #333;
+    background: #111;
     position: absolute;
     top: 60px;
     left: 0;
@@ -512,13 +512,15 @@ i {
   }
 
   .nav-links a {
-    display: flex;
+    /* display: flex; */
     margin: 8px 0px;
   }
 
   .navbar .container {
     flex-direction: column;
-    background: #333;
+    background: #111;
+    max-width: 100%;
+    box-shadow: none;
   }
 
   .home-section {
