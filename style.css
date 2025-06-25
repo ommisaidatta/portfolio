@@ -6,6 +6,8 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 body {
   font-family: 'Poppins', sans-serif;
@@ -30,7 +32,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 10px;
   border-radius: 20px;
   border-bottom: 1px solid #0ef;
   box-shadow: 0 3px 8px rgba(0, 238, 255, 0.5);
@@ -56,7 +58,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  /* box-shadow: 0 2px 5px rgba(0,0,0,0.2); */
   border: 1px solid #0077ff;
 }
 
@@ -112,7 +114,7 @@ a {
   color: #aaa;
 }
 .home-text h1 {
-  font-size: 48px;
+  font-size: 40px;
   color: #fff;
 }
 .home-text h2 {
@@ -163,7 +165,7 @@ i {
 
 /* Image */
 .home-image {
-  flex: 0.4;
+  flex: 0.5;
   text-align: center;
 }
 .home-image img {
@@ -494,17 +496,111 @@ i {
 
 
 @media (max-width: 480px) {
-  .navbar .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .nav-links {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    background: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    padding: 0px;
+    justify-content: center;
+    border-bottom: 1px solid white;
   }
 
   .nav-links a {
-    margin: 10px 0;
+    display: flex;
+    margin: 8px 0px;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    background: #333;
+  }
+
+  .home-section {
+    padding-bottom: 15px;
+  }
+    .home-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .home-text{
+    flex: 1 1 100%;
+  }
+  .home-text h1{
+    font-size: 34px;
+  }
+  .home-text h2 {
+    font-size: 24px;
+  }
+
+  .home-image img {
+    width: 80%;
+    height: auto;
+    display: none;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn {
+    text-align: center;
+  }
+   .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+
+  .skills-section {
+    padding-top: 0;
+  }
+    .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* from 4 to 2 columns */
+  }
+
+  .education-section {
+    padding-top: 0;
+  }
+  .edu-img img {
+    width: 120px;
+  }
+
+  .projects-section {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+    .project {
+    flex-direction: column;
+    min-width: 100%; /* Fix overflow */
+    text-align: center;
+  }
+
+  .project-content,
+  .project-image {
+    flex: 1 1 100%;
+    padding: 10px;
+  }
+
+  .project-image img {
+    height: 400px;
+    max-width: 90%;
+  }
+
+    .contact-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  footer {
+    text-align: center;
   }
 }
