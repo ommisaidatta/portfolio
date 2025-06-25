@@ -3,7 +3,7 @@ AOS.init({
     once: true
 });
 
-  const thresholdValue = window.innerWidth <= 768 ? 0.5 : 0.6;
+  const thresholdValue = window.innerWidth <= 768 ? 0.4 : 0.6;
 
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
