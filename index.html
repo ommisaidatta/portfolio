@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
@@ -20,7 +19,12 @@
         <span class="logo-circle">SD</span>
         <span class="logo-text">Sai Datta</span>
       </div>
-      <nav class="nav-links">
+
+       <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+      <nav class="nav-links" id="nav-links">
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#skills" class="nav-link">Skills</a>
@@ -202,7 +206,7 @@
       <img src="assets/projectimages/weather_image.png" alt="Weather App Screenshot" />
     </div>
     <div class="project-content">
-      <h3>Weather Forecast Application</h3>
+      <h3>Weather Application</h3>
       <p>
         A responsive weather application using HTML, CSS, and JavaScript. It fetches real-time weather data and 5-day forecasts from the OpenWeatherMap API. Features include geolocation-based weather, dark mode toggle, dynamic weather-based backgrounds, and user-friendly design optimized for all screen sizes.
       </p>

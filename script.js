@@ -3,7 +3,7 @@ AOS.init({
     once: true
 });
 
-  const thresholdValue = window.innerWidth <= 768 ? 0.4 : 0.6;
+  const thresholdValue = window.innerWidth <= 768 ? 0.3 : 0.6;
 
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -23,10 +23,26 @@ AOS.init({
     },
     {
       threshold: thresholdValue,
+      rootMargin: "0px 0px 40px 0px"
     }
   );
 
   sections.forEach(section => {
     observer.observe(section);
+  });
+
+  const toggleBtn = document.getElementById("menu-toggle");
+  const navLink = document.getElementById("nav-links");
+
+  toggleBtn.addEventListener("click", () => {
+    navLink.classList.toggle("active");
+    document.body.classList.toggle("menu-open");
+  });
+
+ document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLink.classList.remove("active");
+      document.body.classList.remove("menu-open");
+    });
   });
 
